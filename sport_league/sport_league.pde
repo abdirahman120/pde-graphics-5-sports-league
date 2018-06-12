@@ -1,0 +1,59 @@
+ /*
+ * Sports League
+ * by abdirahaman
+ * 
+ * 
+ */
+    PImage img;
+ void setup(){
+   size(852,480);
+   img = loadImage("download.jpg");
+ }
+ void draw(){
+   image(img, 0, 0);
+
+    int l = 1;
+    int x = 150;
+    int y = 76;
+    int y1 = 130;
+     String teamname [] = {"0","liverpool","man utd","sevilla"};
+      int teamwins [] = {0,5,10,2};
+       int teamlosses [] = {0,11,6,14};
+         for (; l < 4; l++){
+           int teampoints = teamwins[l]*2;
+            stroke(255);
+            line(125,y+l*82,723,y+l*82);
+            line(x+l*150,76,x+l*150,404);
+             textSize(20);
+             
+             //information
+             fill(255);
+              text(teamname[l],150,y1+l*82);
+              text(teamwins[l],325,y1+l*82);
+              text(teamlosses[l],475,y1+l*82);
+              text(teampoints,625,y1+l*82);
+              
+             //title
+             fill(0);
+               text("Team",150,y1);
+             fill(255,0,0);  
+               text("Wins",325,y1);
+             fill(0,255,0);
+               text("Loss",475,y1);
+             fill(0,0,255);
+               text("Points",625,y1);
+          
+         
+         
+         
+         
+         
+         }
+       
+       
+       
+       
+       
+       
+       
+       }
